@@ -8,6 +8,7 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\FullLocationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HttpResponseController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PolymorphicController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RelationController;
@@ -74,4 +75,7 @@ Route::get('/sessions', [SessionController::class, 'index']);
 
 // CACHE CONTROLLER
 Route::get('/cache', [CacheController::class, 'index']);
+
+// QUEUE
+Route::post('/send-welcome-mail', [MailController::class, 'sendMail'])->name('send-welcome-mail');
 require __DIR__.'/auth.php';

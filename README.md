@@ -422,3 +422,10 @@
 
 -   To create a JOB class run this command:  ====>>  php artisan make:job SendWelcomeEmail.
 
+-   To create a Mail class run this command:   ====>>   php artisan make:mail WelcomeEmail .
+
+-   To process the Queue run this command:   ====>>   php artisan queue:work  .
+
+-   To run the command above on the server, we use a *cron job* .
+
+-   Ensure that the command is running continuously to process tasks (jobs) from the queue stored in the database.
