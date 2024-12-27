@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BladeComponentController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\CacheController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmailController;
@@ -78,4 +79,7 @@ Route::get('/cache', [CacheController::class, 'index']);
 
 // QUEUE
 Route::post('/send-welcome-mail', [MailController::class, 'sendMail'])->name('send-welcome-mail');
+
+// BOOK (MODEL OBSERVERS, EVENT & LISTENERS
+Route::resource('/books', BookController::class);
 require __DIR__.'/auth.php';

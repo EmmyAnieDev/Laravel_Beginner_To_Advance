@@ -429,3 +429,17 @@
 -   To run the command above on the server, we use a *cron job* .
 
 -   Ensure that the command is running continuously to process tasks (jobs) from the queue stored in the database.
+
+##  OBSERVERS, EVENT AND LISTENERS
+
+-   Model Observers in Laravel are classes that allow you to listen for specific events that occur on Eloquent models, such as when a model is created, updated, deleted, or retrieved. 
+
+-   Observers help keep your application logic clean by separating business logic related to model events into dedicated classes.
+
+-   To create an Observer run this command:   ====>>  php artisan make:observer BookObserver --model=Book  .
+
+-   Register the Observer class in the AppServiceProvider class.
+
+*   _WHEN WE CREATE OR UPDATE OR DELETE A RECORD IN OUR DATABASE, IT TRIGGERS AN EVENT. THE OBSERVER LISTENS FOR THAT EVENT AND PERFORM A CORRESPONDING TASK_
+
+-   Following the SOLID principles, particularly the Single Responsibility Principle (SRP), the controller should only handle storing the data. Tasks like sending email notifications should be delegated to a separate service or listener.
