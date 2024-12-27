@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\BookCreateEvent;
 use App\Mail\BookCreateMail;
 use App\Models\Book;
 use Illuminate\Http\Request;
@@ -34,6 +35,9 @@ class BookController extends Controller
             'title' => 'A man called God',
             'description' => 'Based on a True Event'
         ]);
+
+        // Triggers an event to notify listeners that a book has been created.
+        event(new BookCreateEvent("admin@admin.com"));
 
         dd($book);
     }

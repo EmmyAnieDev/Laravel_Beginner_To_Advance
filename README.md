@@ -443,3 +443,26 @@
 *   _WHEN WE CREATE OR UPDATE OR DELETE A RECORD IN OUR DATABASE, IT TRIGGERS AN EVENT. THE OBSERVER LISTENS FOR THAT EVENT AND PERFORM A CORRESPONDING TASK_
 
 -   Following the SOLID principles, particularly the Single Responsibility Principle (SRP), the controller should only handle storing the data. Tasks like sending email notifications should be delegated to a separate service or listener.
+
+-   Events: These are actions or occurrences that happens in our Application.
+
+-   Listeners: These are the classes that react to the Events when called or triggered.
+
+-   _A SINGLE EVENT CAN HAVE MULTIPLE LISTENERS_ Supposing we want to do multiple TASK with just an EVENT.
+
+-   To create an Event and a Listener for that event. run the commands below:
+
+-   php artisan make:event,     php artisan make:listener
+
+*   _DIFFERENCE BETWEEN MODEL OBSERVERS AND EVENT & LISTENERS_
+
+-   Model observers are specifically designed to Monitor changes in Models, 
+
+-   while Events and Listeners can be used to handle application-wide events, making them more versatile and not limited to models.
+
+
+
+
+
+
+

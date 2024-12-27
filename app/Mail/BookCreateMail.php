@@ -13,15 +13,12 @@ class BookCreateMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-
-    public $book;
-
     /**
      * Create a new message instance.
      */
-    public function __construct($book)
+    public function __construct()
     {
-        $this->book = $book;
+
     }
 
     /**

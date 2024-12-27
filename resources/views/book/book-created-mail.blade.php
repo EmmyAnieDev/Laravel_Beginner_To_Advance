@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>You got a new mail</h1>
-<p style="color: blueviolet">Book Created: "{{ $book->title }}"</p>
+<p style="color: blueviolet">Book Title: Example </p>
 
 </body>
 </html>

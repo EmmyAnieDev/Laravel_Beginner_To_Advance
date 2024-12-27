@@ -15,7 +15,7 @@ class BookObserver
     {
         // We can get the instance of the created book from this function
         // and use it to send an email notification with the book instance.
-        Mail::to('mary@mary.cng')->send(new BookCreateMail($book));
+        Mail::to('mary@mary.cng')->queue(new BookCreateMail());
     }
 
     /**
