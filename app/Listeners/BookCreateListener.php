@@ -24,8 +24,8 @@ class BookCreateListener
      */
     public function handle(BookCreateEvent $event): void
     {
-        // Clear view cache (optional: only for testing/debugging)
-        Artisan::call('view:clear');
+        // Clear views cache (optional: only for testing/debugging)
+        Artisan::call('views:clear');
 
         Mail::to($event->email)->queue(new BookCreateMail());
     }

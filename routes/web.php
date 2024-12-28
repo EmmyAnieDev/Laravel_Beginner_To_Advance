@@ -10,6 +10,7 @@ use App\Http\Controllers\FullLocationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HttpResponseController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PolymorphicController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RelationController;
@@ -83,7 +84,8 @@ Route::post('/send-welcome-mail', [MailController::class, 'sendMail'])->name('se
 // BOOK (MODEL OBSERVERS, EVENT & LISTENERS
 Route::resource('/books', BookController::class);
 
-Route::get('/message', function () {
-    return view('chat.message');
-});
+// BROADCAST EVENT MESSAGE CONTROLLER
+Route::get('/message', [MessageController::class, 'message']);
+Route::get('/send-message', [MessageController::class, 'sendMessage']);
+
 require __DIR__.'/auth.php';

@@ -515,3 +515,11 @@
 -   Add VITE variables below the 'VITE_APP_NAME' in the .env file .  
 
 -   Run the 'npm run build' command:   ====>>   npm run build  .
+
+## BROADCASTING RECAP
+
+-  We only Broadcast an event when working with real-time updates.
+
+-  The Server broadcasts the event, while the Client side listens to the event.
+
+-  The data we receive in the constructor will be automatically broadcast by the event.
