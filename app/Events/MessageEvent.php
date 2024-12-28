@@ -30,9 +30,9 @@ class MessageEvent implements ShouldBroadcast
     public function broadcastOn(): array
     {
 
-        # Working with public Channel
+        # Working with private Channel
         return [
-            new Channel('chat'),
+            new PrivateChannel('chat'),
         ];
     }
 }

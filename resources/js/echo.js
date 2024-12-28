@@ -11,10 +11,8 @@ window.Echo = new Echo({
 });
 
 
-
 // Listening to the Chat Channel
-window.Echo.channel('chat').listen('MessageEvent', (e) => {
+window.Echo.private('chat').listen('MessageEvent', (e) => {
     console.log(e);
-
-    document.getElementById('messages').innerHTML += `<p>${e.message}<\p>`
-})
+    document.getElementById('messages').innerHTML += `<p>${e.message}</p>`
+});

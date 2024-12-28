@@ -523,3 +523,7 @@
 -  The Server broadcasts the event, while the Client side listens to the event.
 
 -  The data we receive in the constructor will be automatically broadcast by the event.
+
+-  routes/channels.php ====>> This route handles our broadcasting just like web routes.
+
+-  The way web.php manages web URLs, channels.php manages who can connect to our real-time channels.
