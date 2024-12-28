@@ -460,9 +460,18 @@
 
 -   while Events and Listeners can be used to handle application-wide events, making them more versatile and not limited to models.
 
+##  BROADCASTING
 
+-   BROADCASTING in Laravel allows you to broadcast events from your server to connected clients like browser, mobile devices, etc. in real time using technologies like WebSocket.
 
+-   This is particularly useful for building real time features like notification, real time chat applications, live updates, etc.
 
+*   _WEBSOCKET is a network protocol that enables full-duplex (two-way) communication between a client and a server over a single, persistent connection._
 
+-   Via WebSocket we basically can pass our data in real time.
 
+-   PUSHER is a platform and service that provides real-time communication APIs to facilitate the implementation of real-time features in applications. 
 
+-   It is widely used for enabling real-time data updates, push notifications, and live interactions between clients and servers without the need for complex infrastructure setup.
+
+-   _IN BROADCASTING, WE BROADCAST EVENT FROM THE CONTROLLER AND NOT FIRE EVENT_
