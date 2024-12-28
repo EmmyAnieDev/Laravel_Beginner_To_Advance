@@ -475,3 +475,23 @@
 -   It is widely used for enabling real-time data updates, push notifications, and live interactions between clients and servers without the need for complex infrastructure setup.
 
 -   _IN BROADCASTING, WE BROADCAST EVENT FROM THE CONTROLLER AND NOT FIRE EVENT_
+
+##  BROADCASTING - CHANNELS
+
+-   In Pusher and similar real-time platforms, Channels are used to organize events and messages for real-time communication.
+
+-   They come in three types: Public, Private, and Presence. Each has specific use cases and levels of access control.
+
+-   Public Channels: This is the type of Channel that any client can subscribe to without authentication. (e.g. Live sports scores. Stock market updates. Public announcements.).
+
+-   Private Channels: This is the type of Channel that require user authentication before subscribing. (e.g. WhatsApp group. Facebook Messenger Stock market updates. Public announcements.).
+
+-   User-specific notifications (e.g., order updates for a specific customer).
+
+-   Content restricted to logged-in users or premium members.
+
+-   Presence Channels: A special type of Private Channel with added functionality to track and broadcast user presence information (e.g., online/offline status).
+
+-   Showing a list of users in a chat room.
+
+-   Collaborative applications (e.g., a live document editor showing who is currently editing, Google Docs, chat apps).
