@@ -9,3 +9,12 @@ window.Echo = new Echo({
     cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
     forceTLS: true
 });
+
+
+
+// Listening to the Chat Channel
+window.Echo.channel('chat').listen('MessageEvent', (e) => {
+    console.log(e);
+
+    document.getElementById('messages').innerHTML += `<p>${e.message}<\p>`
+})
