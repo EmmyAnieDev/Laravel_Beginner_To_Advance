@@ -495,3 +495,23 @@
 -   Showing a list of users in a chat room.
 
 -   Collaborative applications (e.g., a live document editor showing who is currently editing, Google Docs, chat apps).
+
+##  BROADCASTING - INSTALLATION  - Server Side Installation
+
+-   To install Broadcasting run this command:   ====>>   php artisan install:broadcasting  .   choose 'no' when asked to use Laravel Reverb.
+
+-   To install Server side package for Pusher run this command:    ====>   composer require pusher/pusher-php-server  .
+
+-   Add Pusher variables above the 'VITE_APP_NAME' in the .env file .
+
+-   Set Broadcasting connection to 'pusher'  ( BROADCAST_CONNECTION=pusher )  .
+
+##  BROADCASTING - INSTALLATION  - Client Side Installation
+
+-   To install Client side package for Pusher run this command:    ====>   npm install --save-dev laravel-echo pusher-js .
+
+-   Update the 'resources/js/echo.js' file to Pusher
+
+-   Add VITE variables below the 'VITE_APP_NAME' in the .env file .  
+
+-   Run the 'npm run build' command:   ====>>   npm run build  .

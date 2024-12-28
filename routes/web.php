@@ -82,4 +82,8 @@ Route::post('/send-welcome-mail', [MailController::class, 'sendMail'])->name('se
 
 // BOOK (MODEL OBSERVERS, EVENT & LISTENERS
 Route::resource('/books', BookController::class);
+
+Route::get('/message', function () {
+    return view('chat.message');
+});
 require __DIR__.'/auth.php';
