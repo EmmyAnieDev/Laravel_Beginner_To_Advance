@@ -17,7 +17,7 @@ class MessageEvent implements ShouldBroadcast
     /**
      * Create a new event instance.
      */
-    public function __construct(public $message)
+    public function __construct(public $message, public $id)
     {
         //
     }
@@ -32,7 +32,10 @@ class MessageEvent implements ShouldBroadcast
 
         # Working with private Channel
         return [
-            new PrivateChannel('chat'),
+
+            // Broadcasting the message to a private channel named 'chat.<id>'.
+            // Any listener subscribed to the channel (chat.<id>) will receive the message.
+            new PrivateChannel('chat.'.$this->id),  // chat.id ----->>  chat.19
         ];
     }
 }

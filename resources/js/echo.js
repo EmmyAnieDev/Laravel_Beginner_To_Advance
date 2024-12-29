@@ -12,7 +12,9 @@ window.Echo = new Echo({
 
 
 // Listening to the Chat Channel
-window.Echo.private('chat').listen('MessageEvent', (e) => {
+var user_id = document.querySelector('meta[name="user_id"]').getAttribute('content');
+
+window.Echo.private('chat.' + user_id).listen('MessageEvent', (e) => {  //  chat.id    =====>   chat.19
     console.log(e);
     document.getElementById('messages').innerHTML += `<p>${e.message}</p>`
 });

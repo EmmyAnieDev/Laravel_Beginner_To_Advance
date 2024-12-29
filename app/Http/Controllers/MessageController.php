@@ -13,7 +13,8 @@ class MessageController extends Controller
 
     function sendMessage() {
 
-        event(new MessageEvent('This is a new message'));
+        // Here, 19 represents the ID of the user (receiver) or the specific chat thread.
+        event(new MessageEvent('This is a new message', 19));
 
         return 'Message sent';
     }

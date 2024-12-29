@@ -527,3 +527,17 @@
 -  routes/channels.php ====>> This route handles our broadcasting just like web routes.
 
 -  The way web.php manages web URLs, channels.php manages who can connect to our real-time channels.
+
+## BROADCASTING PASSING PARAMETERS
+
+-   Passing parameters in your channel is essential for real-time communication. 
+
+-   This allows you to send events to specific users by including an identifier to target the intended recipient.
+
+-   Listening (/message): Requires a logged-in user because private channels enforce authentication and authorization for subscribing.
+
+-   Broadcasting (/send-message): Does not require a logged-in user because broadcasting itself is server-controlled and security is handled by private channel subscriptions.
+
+-   The broadcast does not involve client authentication—it just sends the event to the broadcaster (e.g., Pusher or Redis).
+
+-   Private channels enforce access control at the listening stage (when subscribing), not at the broadcasting stage.

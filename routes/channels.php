@@ -6,8 +6,12 @@ Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });
 
-// Authorizes any authenticated user to access the 'chat' channel.
-Broadcast::channel('chat', function ($user) {
-    return true;
+// The $user represents the currently authenticated user from the frontend (listener).
+// The $id is the placeholder in the channel name (e.g., 'chat.19').
+Broadcast::channel('chat.{id}', function ($user, $id) {
+
+    // Grant permission to listen to the event if the logged-in user's ID matches the channel's ID.
+    return (int) $user->id === (int) $id;
 });
+
 
