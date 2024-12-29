@@ -14,4 +14,10 @@ Broadcast::channel('chat.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });
 
+// This channel is a presence channel named 'online'. It allows you to track users who are currently
+// connected, joined, or leaving the channel. The user data returned includes all the user's attributes as an array.
+Broadcast::channel('online', function ($user) {
+    return $user->toArray();
+});
+
 

@@ -18,3 +18,22 @@ window.Echo.private('chat.' + user_id).listen('MessageEvent', (e) => {  //  chat
     console.log(e);
     document.getElementById('messages').innerHTML += `<p>${e.message}</p>`
 });
+
+
+// This code automatically joins the current user to the 'online' channel.
+// The join function automatically recognizes that you are using a presence channel.
+window.Echo.join('online')
+    .here(users => {   // Provides information about the currently connected users.
+        users.forEach(user => {
+            console.log(user.name + ' is online');
+        });
+    })
+    .joining(user => {   // Provides information about users who have just joined.
+        console.log(user.name + ' Joined the channel');
+    })
+    .leaving(user => {   // Provides information about users who are leaving the channel.
+        console.log(user.name + ' Left the channel');
+    });
+
+
+

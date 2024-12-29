@@ -541,3 +541,17 @@
 -   The broadcast does not involve client authentication—it just sends the event to the broadcaster (e.g., Pusher or Redis).
 
 -   Private channels enforce access control at the listening stage (when subscribing), not at the broadcasting stage.
+
+## BROADCASTING PRESENCE CHANnELS
+
+-   The presence channel allows you to retrieve information about a user’s activity within a channel. Specifically, it provides data such as when a user joins or leaves the channel.
+
+-   Additionally, you can access the current number of users connected to the channel.
+
+*   _The presence channel primarily provides three types of information:_
+
+-   1: When a user joins the channel.  2: When a user leaves the channel. 3: A list of users currently connected to the channel.
+
+-   In a Presence Channel, you don't need to trigger an event manually. Instead, you simply listen to the channel, and it automatically provides updates such as when a user joins, leaves, or the list of currently connected users.
+
+-   Then also create a route for the Presence Channel.
