@@ -679,3 +679,11 @@
 -   After updating composer.json, run the following command to autoload the helper file:  composer du .
 
 -   Helper Functions are globally accessible (Blade file, Controllers), whereas Traits are primarily used within classes like controllers.
+
+##  ROUTE MODEL BINDING
+
+-   Laravel Route Model Binding is a feature that allows you to automatically inject model instance into your route based on the route parameters, instead of manually retrieving a model instance by its ID
+
+-   To retrieve an item from the database, instead of using string $id with findOrFail($id), we use Route Model Binding with Computer $computer.
+
+-   To create a controller with default Route Model Binding, run the command:   php artisan make:controller ComputerController --resource --model=Computer

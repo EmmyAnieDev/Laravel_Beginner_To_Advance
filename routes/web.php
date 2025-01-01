@@ -3,6 +3,7 @@
 use App\Http\Controllers\BladeComponentController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CacheController;
+use App\Http\Controllers\ComputerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DependencyInjectionController;
 use App\Http\Controllers\EmailController;
@@ -113,5 +114,8 @@ Route::get('trait', [TraitController::class, 'index']);
 
 // HELPER FUNCTION
 Route::get('helper-function', [HelperFunctionController::class, 'index']);
+
+// ROUTE MODEL BINDING
+Route::resource('computers', ComputerController::class);
 
 require __DIR__.'/auth.php';
