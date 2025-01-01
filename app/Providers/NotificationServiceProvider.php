@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\NotificationService;
+use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
 class NotificationServiceProvider extends ServiceProvider
@@ -22,9 +23,14 @@ class NotificationServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap services.
+     *
+     * The boot method is executed when the application is booting.
      */
     public function boot(): void
     {
-        //
+        // Here, we are assigning an alias 'Notification' to the NotificationService class.
+        // This allows us to reference the service using the alias, matching the name used in the facade.
+        $this->app->alias(NotificationService::class, 'Notification');
     }
+
 }

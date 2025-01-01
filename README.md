@@ -639,3 +639,19 @@
 -   Programmer Code Flow [ Service class --> Service Provider --> Controller --> Route] .
 
 -   Sending the Notification Flow: [ Routes -->  Controller --> Service class --> Service provider --> Service container ] .
+
+##  FACADES
+
+-   Facades are essentially a shortcut to access our services class make code more readable and easier to write.
+
+-   Facade basically work with the service. It is an approach to easily access the Service.
+
+-   Laravel Facades provide a convenient and static like interface to services that are bind in the Laravel service container.
+
+-   Even though they look like a static methods, behind the scenes they are instance of classes that are resolved from the service container.
+
+-   To crete a Facade class run this command:  ====>>  php artisan make:class Facades/Notification .
+
+-   After creating the class, extends the Facade class and also add the method.
+
+-   Programmer Code Flow [ Service class --> Facade --> Service Provider --> Controller --> Route] .
