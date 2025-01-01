@@ -612,8 +612,14 @@
 
 -   If Laravel doesn't register the services, they won't be available for use in your project.
 
+##  SERVICE PROVIDER
 
+-   service provider acts as a server that provides features by registering and booting services.
 
+-   It is used to bind services to the container and retrieve them when needed.
 
+-   Laravel comes with default service providers. example AppServiceProvider.
 
+-   To create a provider, run the command:  ====>>  php artisan make:provider TestServiceProvider
 
+-   Then register the new provider in the bootstrap/providers.php file   (Laravel 11 register by default when the provider is created) .

@@ -16,6 +16,7 @@ use App\Http\Controllers\PolymorphicController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RelationController;
 use App\Http\Controllers\ServiceContainerController;
+use App\Http\Controllers\TestServiceProviderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SessionController;
@@ -97,5 +98,8 @@ Route::get('test-dependency/global', [DependencyInjectionController::class, 'cre
 // SERVICE CONTAINER
 Route::get('service-container', [ServiceContainerController::class, 'index']);
 Route::get('service-container/binding', [ServiceContainerController::class, 'createBinding']);
+
+// SERVICE PROVIDER CONTAINER
+Route::get('service-provider', [TestServiceProviderController::class, 'index']);
 
 require __DIR__.'/auth.php';
