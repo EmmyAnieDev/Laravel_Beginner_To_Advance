@@ -12,6 +12,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HttpResponseController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\NotificationServiceController;
 use App\Http\Controllers\PolymorphicController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RelationController;
@@ -101,5 +102,8 @@ Route::get('service-container/binding', [ServiceContainerController::class, 'cre
 
 // SERVICE PROVIDER CONTAINER
 Route::get('service-provider', [TestServiceProviderController::class, 'index']);
+
+// SERVICE PROVIDER WITH SERVICE CLASS
+Route::get('notification-service', [NotificationServiceController::class, 'sendNotification']);
 
 require __DIR__.'/auth.php';

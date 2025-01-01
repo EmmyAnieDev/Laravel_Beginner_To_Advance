@@ -623,3 +623,19 @@
 -   To create a provider, run the command:  ====>>  php artisan make:provider TestServiceProvider
 
 -   Then register the new provider in the bootstrap/providers.php file   (Laravel 11 register by default when the provider is created) .
+
+##  SERVICE PROVIDER WITH SERVICE CLASS
+
+-   To create a service class, run this command:   ====>>  php artisan make:class Services/NotificationService
+
+-   Create notification service provider with command:   ====>  php artisan make:provider NotificationServiceProvider
+
+-   When we use the Bind method ( app()->bind('') ) and we want to retrieve the service from the container using the make method ( app()->make('') ) we create a new instance everytime.
+
+-   Singleton only create a single instance and returns the same instance everytime we call the make method.
+
+-   Singleton is more performance efficient.
+
+-   Programmer Code Flow [ Service class --> Service Provider --> Controller --> Route] .
+
+-   Sending the Notification Flow: [ Routes -->  Controller --> Service class --> Service provider --> Service container ] .
