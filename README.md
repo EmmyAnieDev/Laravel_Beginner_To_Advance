@@ -577,3 +577,43 @@
 -   The techniques (cutting, nailing) are the methods.
   
 -   The carpenter (class) needs tools (dependencies) to perform their tasks (methods), but the tools are provided to them instead of them creating the tools themselves.
+
+##  SERVICE CONTAINER
+
+-   Service Container: This is where Laravel stores it services. Example: Cache, Event and more.
+
+-   The Laravel Service Container is a powerful tool that _manages the dependencies_ of classes in your application.
+
+-   It acts as a _central place_ where Laravel stores and resolves all the dependencies your classes need to work properly.
+
+-   _Think of the Laravel Service Container as a big, organized toolbox that Laravel carries around._
+
+-   Whenever your application needs something—like a specific tool—Laravel knows exactly where to find it in this toolbox. It picks out the right tool (dependency) and hands it over, ensuring your class has everything it needs to work smoothly.
+
+-   The Service are services (tools) like Cache, database connection, Session, Mailer, Queue, Event and more that Laravel provides.
+
+-   Services are usually provided by Laravel's core or can be custom-built to handle specific tasks in your application.
+
+-   The Container is the tools box where these services are stored. That why it's called Service Container.
+
+-   _For example,_ Cache is a service that helps us store and retrieve data efficiently.
+
+-   Laravel knows how to provide the Cache service because it's registered in the Service Container. When we call for Cache, Laravel automatically resolves it from the container and gives us access to the Cache tool.
+
+-   The Service Container ensures that we don't need to create or manage the Cache service manually. Instead, Laravel will handle it and inject it when required, simplifying the process and improving code organization.
+
+-   **If we bind anything in our container, It will be globally accessible making us able to access that item in our entire project.**
+
+##  SERVICE CONTAINER WITH SERVICE PROVIDER
+
+-   **We can bind services using the AppServiceProvider class or any other service provider class. Service providers are special classes in Laravel that provide services to your application by registering them into the service container.**
+
+-   When your application runs, Laravel first registers all available services by calling the register() method. Then, it boots the services by calling the boot() method.
+
+-   If Laravel doesn't register the services, they won't be available for use in your project.
+
+
+
+
+
+

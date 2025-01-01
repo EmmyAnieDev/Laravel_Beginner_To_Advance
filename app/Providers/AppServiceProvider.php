@@ -16,7 +16,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Binding a closure to the 'first_class' abstract name in the service container.
+        // When 'first_class' is resolved, the closure will be executed,
+        // and it will return the message "This is my first service".
+        app()->bind('first_class', function () {
+            dd("This is my first service");
+        });
     }
 
     /**

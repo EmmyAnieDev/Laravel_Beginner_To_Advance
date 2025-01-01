@@ -15,6 +15,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PolymorphicController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RelationController;
+use App\Http\Controllers\ServiceContainerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SessionController;
@@ -92,5 +93,9 @@ Route::get('/send-message', [MessageController::class, 'sendMessage']);
 // DEPENDENCY INJECTION
 Route::get('test-dependency/method', [DependencyInjectionController::class, 'index']);
 Route::get('test-dependency/global', [DependencyInjectionController::class, 'create']);
+
+// SERVICE CONTAINER
+Route::get('service-container', [ServiceContainerController::class, 'index']);
+Route::get('service-container/binding', [ServiceContainerController::class, 'createBinding']);
 
 require __DIR__.'/auth.php';
