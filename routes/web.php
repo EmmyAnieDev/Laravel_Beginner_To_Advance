@@ -4,6 +4,7 @@ use App\Http\Controllers\BladeComponentController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CacheController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DependencyInjectionController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\FullLocationController;
@@ -87,5 +88,9 @@ Route::resource('/books', BookController::class);
 // BROADCAST EVENT MESSAGE CONTROLLER
 Route::get('/message', [MessageController::class, 'message']);
 Route::get('/send-message', [MessageController::class, 'sendMessage']);
+
+// DEPENDENCY INJECTION
+Route::get('test-dependency/method', [DependencyInjectionController::class, 'index']);
+Route::get('test-dependency/global', [DependencyInjectionController::class, 'create']);
 
 require __DIR__.'/auth.php';

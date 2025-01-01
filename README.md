@@ -555,3 +555,25 @@
 -   In a Presence Channel, you don't need to trigger an event manually. Instead, you simply listen to the channel, and it automatically provides updates such as when a user joins, leaves, or the list of currently connected users.
 
 -   Then also create a route for the Presence Channel.
+
+##  DEPENDENCY INJECTION
+
+-   Dependency injection in Laravel is a design pattern that helps manage dependencies between different parts of our application in a clean and decoupled way.
+
+-   In simple terms, it's a method of providing a class with its dependencies, rather than the class creating those dependencies itself. 
+
+-   We use dependencies to access the properties or methods of another class. When a class depends on another class, it relies on that class to provide certain functionality or data.
+
+-   This makes the code more modular and easier to test and maintain.
+
+-   _Simple Analogy:_
+
+-   Think of a carpenter building a house:
+
+-   The carpenter is the class.
+
+-   The tools (hammer, saw) are the dependencies.
+
+-   The techniques (cutting, nailing) are the methods.
+  
+-   The carpenter (class) needs tools (dependencies) to perform their tasks (methods), but the tools are provided to them instead of them creating the tools themselves.
