@@ -8,6 +8,7 @@ use App\Http\Controllers\DependencyInjectionController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\FullLocationController;
+use App\Http\Controllers\HelperFunctionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HttpResponseController;
 use App\Http\Controllers\MailController;
@@ -109,5 +110,8 @@ Route::get('notification-service', [NotificationServiceController::class, 'sendN
 
 // TRAIT
 Route::get('trait', [TraitController::class, 'index']);
+
+// HELPER FUNCTION
+Route::get('helper-function', [HelperFunctionController::class, 'index']);
 
 require __DIR__.'/auth.php';

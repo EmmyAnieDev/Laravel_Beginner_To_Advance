@@ -664,3 +664,18 @@
 
 -   To use a trait, we include it in a class by adding **use ImageUpload**; and then importing the trait's name into the class where it's needed.
 
+##  HELPER FUNCTIONS.
+
+-   Helper functions are those functions that we can access from our entire application from anywhere of our application, like from our web file, controller, front end, blade file, e.t.c
+
+-   Laravel have some default Helper functions like cache(), session(), app(), 
+
+-   To create a Helper function file, we create a file at app/Helpers/helper.php.
+
+-   To register the helper function and make it accessible throughout the project, follow these steps:
+
+-   Open the composer.json file and locate the autoload key. Add a files key like this:  ====>>  "files": [ "app/Helpers/helper.php" ]  .
+
+-   After updating composer.json, run the following command to autoload the helper file:  composer du .
+
+-   Helper Functions are globally accessible (Blade file, Controllers), whereas Traits are primarily used within classes like controllers.
