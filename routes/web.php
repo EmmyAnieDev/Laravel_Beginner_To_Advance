@@ -18,6 +18,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RelationController;
 use App\Http\Controllers\ServiceContainerController;
 use App\Http\Controllers\TestServiceProviderController;
+use App\Http\Controllers\TraitController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SessionController;
@@ -105,5 +106,8 @@ Route::get('service-provider', [TestServiceProviderController::class, 'index']);
 
 // SERVICE PROVIDER WITH SERVICE CLASS
 Route::get('notification-service', [NotificationServiceController::class, 'sendNotification']);
+
+// TRAIT
+Route::get('trait', [TraitController::class, 'index']);
 
 require __DIR__.'/auth.php';

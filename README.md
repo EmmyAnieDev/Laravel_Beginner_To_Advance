@@ -655,3 +655,12 @@
 -   After creating the class, extends the Facade class and also add the method.
 
 -   Programmer Code Flow [ Service class --> Facade --> Service Provider --> Controller --> Route] .
+
+##  TRAIT
+
+-   A Trait is a feature in Laravel programming that enables code reuse across multiple classes.
+
+-   To create a Trait we run this command:    ====>>   php artisan make:trait Traits/ImageUpload
+
+-   To use a trait, we include it in a class by adding **use ImageUpload**; and then importing the trait's name into the class where it's needed.
+
