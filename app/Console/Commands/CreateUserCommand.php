@@ -42,10 +42,14 @@ class CreateUserCommand extends Command
 
         # Using the options to create a new user...
         # If there's no optional parameter use the default below.
-        $user = $this->option('name') ?? 'Test Admin';
-        $email = $this->option('email') ?? Str::random(4).'@example.com';
-        $password = $this->option('password') ?? 'password';
+        // $user = $this->option('name') ?? 'Test Admin';
+        // $email = $this->option('email') ?? Str::random(4).'@example.com';
+        // $password = $this->option('password') ?? 'password';
 
+        # Ask a user for values.
+        $user = $this->ask('Type your username: ');
+        $email = $this->ask('Type your email: ');
+        $password = $this->ask('Type your password: ');
 
         User::create([
             'name' => $user,
