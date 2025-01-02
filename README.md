@@ -705,3 +705,5 @@
 -   To set a particular language as the default, go to .env file and change the APP_LOCALE value to your preferred language.
 
 -   We can also set the Fallback LOCALE to a specific language
+
+-   Currently, we use the URL to change the language based on its state. However, we could store the language in the session instead. By creating a middleware to check the session for the locale, we can dynamically set the language.

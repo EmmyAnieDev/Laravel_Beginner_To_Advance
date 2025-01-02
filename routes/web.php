@@ -121,6 +121,6 @@ Route::resource('computers', ComputerController::class);
 
 // LOCALIZATION
 Route::get('locale', [LocalizationController::class, 'index']);
-Route::get('locale-lang', [LocalizationController::class, 'selectLanguage']);
+Route::get('locale-lang/{locale?}', [LocalizationController::class, 'selectLanguage'])->name('locale.lang');
 
 require __DIR__.'/auth.php';

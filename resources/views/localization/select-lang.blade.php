@@ -15,10 +15,10 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand">Navbar</a>
-            <form class="d-flex">
-                <select class="form-select" aria-label="Default select example">
-                    <option value="">{{ __('frontend.English') }}</option>
-                    <option value="">{{ __('frontend.French') }}</option>
+            <form class="d-flex" action="{{ route('locale.lang') }}" method="get" onchange="this.submit()">
+                <select class="form-select" aria-label="Default select example" name="locale">
+                    <option @selected( request('locale') == 'en') value="en">{{ __('frontend.English') }}</option>
+                    <option @selected( request('locale') == 'fr') value="fr">{{ __('frontend.French') }}</option>
                 </select>
             </form>
         </div>
