@@ -747,3 +747,19 @@
 -   Different clients such as React, Vue, Flutter, and Kotlin can connect to the same API, as long as the API provides endpoints that conform to a standard protocol (e.g., HTTP/HTTPS) and data format (e.g., JSON or XML). 
 
 -   This allows diverse frontend technologies to communicate with the same backend service seamlessly.
+
+##  REST API -- Http Verbs
+
+-   REST is an architectural style for designing network applications.
+
+-   RESTful APIs are widely used to enable communication between clients and servers over the internet.
+
+-   GET: Retrieves a list of all items.     **Example: GET /items**
+
+-   POST: Creates or add a new item with the data sent in the request body.    **Example: POST /items**
+
+-   PUT {id}: Update or replace the item with the specified unique id.    **Example: PUT /items/{id}**
+
+-   GET {id}: Retrieves the item with the specified unique id.    **Example: GET /items/{id}**
+
+-   DELETE {id}: Deletes the item with the unique id.    **Example: DELETE /items/{id}**
