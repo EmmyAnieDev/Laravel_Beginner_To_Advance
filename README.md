@@ -763,3 +763,33 @@
 -   GET {id}: Retrieves the item with the specified unique id.    **Example: GET /items/{id}**
 
 -   DELETE {id}: Deletes the item with the unique id.    **Example: DELETE /items/{id}**
+
+##  HTTP status codes
+
+-   *Success Codes:*
+
+-   200 OK: The request was successful, and the server returned the requested data.      Example: Successful GET or PUT request.
+
+-   201 Created: The request was successful, and a new resource was created.      Example: Successful POST request.
+
+-   202 Accepted: The request has been received but not yet acted upon (processing will occur asynchronously).    Example: A long-running task initiated by the server.
+
+-   *Client Error Codes:*
+
+-   400 Bad Request: The server could not understand the request due to invalid syntax or missing parameters.    Example: Sending malformed JSON.
+
+-   401 Unauthorized: Authentication is required and has failed or not been provided.     Example: Missing or invalid API key/token.
+
+-   403 Forbidden: The server understood the request but refuses to authorize it.     Example: Accessing a resource without the necessary permissions.
+
+-   404 Not Found: The requested resource could not be found on the server.    Example: Requesting a non-existent endpoint.
+
+-   405 Method Not Allowed: The request method (e.g., POST, GET) is not supported for the requested resource.    Example: Using POST on an endpoint that only allows GET.
+
+-   429 Too Many Requests: The client has sent too many requests in a given time (rate limiting).    Example: Exceeding an API's usage limit.
+
+-   **Server Error Codes:**
+
+-   500 Internal Server Error: The server encountered an unexpected condition that prevented it from fulfilling the request.   Example: Server misconfiguration or unhandled exceptions in code.
+
+-   503 Service Unavailable: The server is currently unavailable (overloaded or down for maintenance).   Example: Temporary downtime or high traffic causing the service to be inaccessible.
