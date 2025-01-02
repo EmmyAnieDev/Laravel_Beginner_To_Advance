@@ -723,3 +723,7 @@
 -   Description  ====>>   This is the description of the command.
 
 -   Changed the default signature to  ====>>   user:create.   and the default description to  ====>>   Create a new user
+
+-   To pass parameters to your Artisan command, you must define them in the signature property of the command. This allows the command to accept input directly from the command line.
+
+-   To create a user with parameters, run this command  ====>>  php artisan user:create testUser testuser@example.com 123456
