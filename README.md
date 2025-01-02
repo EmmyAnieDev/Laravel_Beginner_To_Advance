@@ -735,3 +735,15 @@
 -   _EXAMPLE OF OPTION IN ARTISAN CONSOLE_  ====>>   --name=John
 
 -   Using progress bar, to create 5 users run this command:  ====>>   php artisan user:create --count=5
+
+##  API -- APPLICATION PROGRAMMING INTERFACE
+
+-   API is a set of rules and protocol that allows different software application to communicate with each other. It defines how requests are made, how data is exchanged, and how responses are returned.
+
+-   API is used to integrate and connect various software components, enabling them to share data and functionality.
+
+-   The client sends a request to the API, the API forwards it to the server, the server processes the request and returns a response to the API, and the API sends the response back to the client.
+
+-   Different clients such as React, Vue, Flutter, and Kotlin can connect to the same API, as long as the API provides endpoints that conform to a standard protocol (e.g., HTTP/HTTPS) and data format (e.g., JSON or XML). 
+
+-   This allows diverse frontend technologies to communicate with the same backend service seamlessly.
