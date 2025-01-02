@@ -727,3 +727,9 @@
 -   To pass parameters to your Artisan command, you must define them in the signature property of the command. This allows the command to accept input directly from the command line.
 
 -   To create a user with parameters, run this command  ====>>  php artisan user:create testUser testuser@example.com 123456
+
+-   In Laravel's Artisan console, options are a way to pass additional configuration or parameters to a command in a more flexible and optional manner. 
+
+-   They are similar to arguments but provide more control and allow for more descriptive, named parameters. Options are typically used for optional input values or flags.
+
+-   _EXAMPLE OF OPTION IN ARTISAN CONSOLE_  ====>>   --name=John

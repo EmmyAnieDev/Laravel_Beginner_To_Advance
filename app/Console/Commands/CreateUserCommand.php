@@ -15,7 +15,9 @@ class CreateUserCommand extends Command
      *
      * This is the command itself example php artisan make:command. so the "make:command" is a signature
      */
-    protected $signature = 'user:create {name} {email} {password}';
+    // protected $signature = 'user:create {name} {email} {password}';
+
+    protected $signature = 'user:create {--name=} {--email=} {--password=}';
 
     /**
      * The console command description.
@@ -34,9 +36,16 @@ class CreateUserCommand extends Command
         // $password = 'password';
 
         # Using the arguments to create a new user...
-        $user = $this->argument('name');
-        $email = $this->argument('email');
-        $password = $this->argument('password');
+        // $user = $this->argument('name');
+        // $email = $this->argument('email');
+        // $password = $this->argument('password');
+
+        # Using the options to create a new user...
+        # If there's no optional parameter use the default below.
+        $user = $this->option('name') ?? 'Test Admin';
+        $email = $this->option('email') ?? Str::random(4).'@example.com';
+        $password = $this->option('password') ?? 'password';
+
 
         User::create([
             'name' => $user,
