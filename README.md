@@ -793,3 +793,19 @@
 -   500 Internal Server Error: The server encountered an unexpected condition that prevented it from fulfilling the request.   Example: Server misconfiguration or unhandled exceptions in code.
 
 -   503 Service Unavailable: The server is currently unavailable (overloaded or down for maintenance).   Example: Temporary downtime or high traffic causing the service to be inaccessible.
+
+##  API CONFIGURATION IN LARAVEL 11
+
+-   In Laravel 11, API functionality isn't pre-configured by default. To set it up, you need to publish the API assets.
+
+-   Run the command below:   ====>>   php artisan install:api
+
+-   API Routes goes to routes/api.php not routes/web.php
+
+##  API VERSIONING
+
+-   API Versioning is the practice of managing and organizing changes to an API in a way that ensures stability for existing users while allowing for updates, improvements, or breaking changes.
+
+-   Versioning is the recommended practice when working with APIs, as it helps manage changes and ensures compatibility for different users or clients over time.
+
+-   If you choose not to use versioning for your API, that's entirely acceptable in some scenarios.
