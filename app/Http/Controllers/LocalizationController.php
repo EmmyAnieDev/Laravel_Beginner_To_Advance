@@ -10,4 +10,10 @@ class LocalizationController extends Controller
     {
         return view('localization.index');
     }
+
+
+    function selectLanguage()
+    {
+        return view('localization.select-lang');
+    }
 }
