@@ -707,3 +707,19 @@
 -   We can also set the Fallback LOCALE to a specific language
 
 -   Currently, we use the URL to change the language based on its state. However, we could store the language in the session instead. By creating a middleware to check the session for the locale, we can dynamically set the language.
+
+##  ARTISAN CONSOLE
+
+-   The Artisan console command is a command-line interface provided by the Laravel framework. 
+
+-   Artisan commands are designed to help developers interact with their Laravel application and automate common tasks such as running migrations, creating files, clearing caches, and more. 
+
+-   Artisan commands are executed using the php artisan prefix, followed by the specific command.
+
+-   To create a new command, run this command:  ====>>   php artisan make:command CreateUserCommand
+
+-   Signature   ====>>   This is the command itself example php artisan make:command. so the "make:command" is a signature
+
+-   Description  ====>>   This is the description of the command.
+
+-   Changed the default signature to  ====>>   user:create.   and the default description to  ====>>   Create a new user
