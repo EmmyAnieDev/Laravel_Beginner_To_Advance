@@ -687,3 +687,21 @@
 -   To retrieve an item from the database, instead of using string $id with findOrFail($id), we use Route Model Binding with Computer $computer.
 
 -   To create a controller with default Route Model Binding, run the command:   php artisan make:controller ComputerController --resource --model=Computer
+
+##  LOCALIZATION
+
+-   Localization is a way to make our App support multiple language.
+
+-   Localization is a feature that allows you to create multilingual applications. By providing a way to manage translations and language specific content.
+
+-   It enables your application to support multiple languages, making it accessible to a wider audience.
+
+-   First we have to publish our Localization assets by running this command: php artisan lang:publish
+
+-   You've to provide the short name of the language. Examples: English ==> en, Portugal ==> pt, France ==> fr
+
+-   The key used should be available in all of the language names folders
+
+-   To set a particular language as the default, go to .env file and change the APP_LOCALE value to your preferred language.
+
+-   We can also set the Fallback LOCALE to a specific language

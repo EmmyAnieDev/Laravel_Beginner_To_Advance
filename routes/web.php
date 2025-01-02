@@ -12,6 +12,7 @@ use App\Http\Controllers\FullLocationController;
 use App\Http\Controllers\HelperFunctionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HttpResponseController;
+use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NotificationServiceController;
@@ -117,5 +118,8 @@ Route::get('helper-function', [HelperFunctionController::class, 'index']);
 
 // ROUTE MODEL BINDING
 Route::resource('computers', ComputerController::class);
+
+// LOCALIZATION
+Route::get('locale', [LocalizationController::class, 'index']);
 
 require __DIR__.'/auth.php';
