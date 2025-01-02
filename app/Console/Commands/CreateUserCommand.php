@@ -17,7 +17,9 @@ class CreateUserCommand extends Command
      */
     // protected $signature = 'user:create {name} {email} {password}';
 
-    protected $signature = 'user:create {--name=} {--email=} {--password=}';
+    // protected $signature = 'user:create {--name=} {--email=} {--password=}';
+
+    protected $signature = 'user:create {--name=} {--email=} {--password=} {--count=1}';
 
     /**
      * The console command description.
@@ -47,16 +49,26 @@ class CreateUserCommand extends Command
         // $password = $this->option('password') ?? 'password';
 
         # Ask a user for values.
-        $user = $this->ask('Type your username: ');
-        $email = $this->ask('Type your email: ');
-        $password = $this->ask('Type your password: ');
+        // $user = $this->ask('Type your username: ');
+        // $email = $this->ask('Type your email: ');
+        // $password = $this->ask('Type your password: ');
 
-        User::create([
-            'name' => $user,
-            'email' => $email,
-            'password' => bcrypt($password),
-        ]);
+        $count = $this->option('count');
+        $bar = $this->output->createProgressBar($count);
+        $bar->start();
+        for ($i = 1; $i < $count; $i++) {
+            $user = Str::random(5);
+            $email = Str::random(5).'@example.com';
+            $password = '12345678';
+            User::create([
+                'name' => $user,
+                'email' => $email,
+                'password' => bcrypt($password),
+            ]);
+            $bar->advance();
+        }
+        $bar->finish();
 
-        $this->info("User created: Name: $user Email: $email Password: $password");
+        $this->info("\nUser created successfully!");
     }
 }

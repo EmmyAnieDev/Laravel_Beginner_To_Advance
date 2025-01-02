@@ -733,3 +733,5 @@
 -   They are similar to arguments but provide more control and allow for more descriptive, named parameters. Options are typically used for optional input values or flags.
 
 -   _EXAMPLE OF OPTION IN ARTISAN CONSOLE_  ====>>   --name=John
+
+-   Using progress bar, to create 5 users run this command:  ====>>   php artisan user:create --count=5
