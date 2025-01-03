@@ -19,7 +19,7 @@ class StudentFactory extends Factory
         return [
             'image' => '/uploads/image.png',
             'name' => $this->faker->name(),
-            'grade' => $this->faker->numberBetween(6, 10),
+            'grade' => $this->faker->randomElement(['a', 'b', 'c', 'd', 'e', 'f']),
             'school_id' => $this->faker->numberBetween(1, 10),
         ];
     }

@@ -821,3 +821,17 @@
 -   Always return a response with an appropriate status code to ensure proper communication of the API's outcome.
 
 -   Browsers can only directly handle GET requests through the address bar. For testing POST, PUT, and DELETE requests, use an API client such as Postman or cURL.
+
+##  POST REQUEST
+
+-   When creating a custom Request class, it is recommended to version the Request class to maintain clear separation and organization of API versions.
+
+-   To create a versioned Api Request class run this command:   php artisan make:request Api/v1/StudentStoreRequest  .
+
+-   By default Laravel sends error message
+
+-   Add the fillable property in the model to allow mass assignment.
+
+-   Add to the header:   ====>>  Accept: application/json .
+
+-   Add the data to the body as key-value pairs. 

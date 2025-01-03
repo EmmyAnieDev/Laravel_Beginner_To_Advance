@@ -14,5 +14,6 @@ Route::get('/user', function (Request $request) {
 // This helps in maintaining backward compatibility when newer versions of the API are introduced.
 Route::group(['prefix' => 'v1'], function () {
     Route::get('/students', [StudentController::class, 'index']);
+    Route::post('/students', [StudentController::class, 'store']);
 });
 
