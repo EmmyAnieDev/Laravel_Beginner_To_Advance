@@ -15,5 +15,6 @@ Route::get('/user', function (Request $request) {
 Route::group(['prefix' => 'v1'], function () {
     Route::get('/students', [StudentController::class, 'index']);
     Route::post('/students', [StudentController::class, 'store']);
+    Route::put('/students/{student}', [StudentController::class, 'update']);
 });
 

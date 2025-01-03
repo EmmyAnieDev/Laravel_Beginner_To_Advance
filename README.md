@@ -835,3 +835,11 @@
 -   Add to the header:   ====>>  Accept: application/json .
 
 -   Add the data to the body as key-value pairs. 
+
+##  PUT REQUEST
+
+-   Create another Request class for update Students:   php artisan make:request Api/v1/StudentUpdateRequest  .
+
+-   'sometimes' in rules: It means the field will only be validated if it's present in the request. If the field is not in the request, the validation won't run for it. This is useful for partial updates where only a subset of fields may be updated.
+
+-   $request->only(): This method is used to retrieve an array of only the fields that are present in the request. It's a convenient way to avoid manually handling missing or null fields and ensures only the relevant fields are passed for updating.

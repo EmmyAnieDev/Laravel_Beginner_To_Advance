@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\v1\StudentStoreRequest;
+use App\Http\Requests\Api\v1\StudentUpdateRequest;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -31,6 +32,21 @@ class StudentController extends Controller
             'data' => $student,
             'message' => 'Student created successfully',
             'status' => 201
+        ]);
+
+    }
+
+    function update(StudentUpdateRequest $request, Student $student)
+    {
+        // Only update attributes that are provided
+        $data = $request->only(['image', 'name', 'grade', 'school_id']);
+
+        $student->update($data);
+
+        return response()->json([
+            'data' => $student,
+            'message' => 'Student updated successfully',
+            'status' => 200
         ]);
 
     }
