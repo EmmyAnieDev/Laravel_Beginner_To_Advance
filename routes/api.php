@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\v1\SchoolController;
 use App\Http\Controllers\Api\v1\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,5 +21,11 @@ Route::group(['prefix' => 'v1'], function () {
     Route::put('/students/{student}', [StudentController::class, 'update']);
     Route::get('/students/{student}', [StudentController::class, 'show']);
     Route::delete('/students/{student}', [StudentController::class, 'destroy']);
+});
+
+
+// A Resource API controller for handling CRUD operations on the 'schools' resource
+Route::group(['prefix' => 'v1'], function () {
+    Route::resource('schools', SchoolController::class);
 });
 

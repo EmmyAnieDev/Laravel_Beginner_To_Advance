@@ -847,3 +847,12 @@
 ##  SEARCH 
 
 -   To search for students by name or other criteria, add a query parameter to the URL.  Example:   ====>>    http://127.0.0.1:8000/api/v1/students/search?q=Kihn
+
+##  API RESOURCE CONTROLLER
+
+-   When working with APIs, we can easily create a resource controller that includes methods like index(), store(), show(), update(), and destroy() to handle CRUD operations efficiently.
+
+-   To create an Api resource controller run this command:  ====>>   php artisan make:controller Api/v1/SchoolController -r --api .
+
+-   This will automatically create 5 methods: index, store, update, show, and destroy .
+
