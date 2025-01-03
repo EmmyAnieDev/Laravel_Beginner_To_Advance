@@ -62,4 +62,18 @@ class StudentController extends Controller
 
         return response()->json(['message' => 'Student deleted successfully', 'status' => 200]);
     }
+
+    function search(Request $request)
+    {
+        $query = $request->input('q');
+
+        if ($query) {
+
+            $student = Student::where('name', 'LIKE', "%$query%")->orWhere('grade', 'LIKE', "%$query%")->get();
+            return response()->json($student, 200);
+
+        }
+
+        return response()->json(['message' => 'No results found', 'status' => 404]);
+    }
 }
