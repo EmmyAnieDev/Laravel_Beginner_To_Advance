@@ -50,4 +50,9 @@ class StudentController extends Controller
         ]);
 
     }
+
+    function show(Student $student)
+    {
+        return response()->json($student, 200);
+    }
 }
