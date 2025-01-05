@@ -856,3 +856,12 @@
 
 -   This will automatically create 5 methods: index, store, update, show, and destroy .
 
+##  API PAGINATION
+
+-   Added pagination to fetch data from the database for faster queries with the "page" parameter and the page number. Example below for fetching all students and searching for students.
+
+-   By default, the page is 1. So, if we don’t add a page parameter, it will retrieve page 1, which contains the first 20 students.
+
+-   Fetching all student with pagination:   ====>>    http://127.0.0.1:8000/api/v1/students?page=5
+
+-   Searching for students with pagination:   ====>>    http://127.0.0.1:8000/api/v1/students/search?q=Elina&page=2

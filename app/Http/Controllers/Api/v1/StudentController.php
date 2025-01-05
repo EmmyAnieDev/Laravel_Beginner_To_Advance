@@ -13,9 +13,14 @@ class StudentController extends Controller
 
     function index()
     {
-        $students = Student::all();
+        $students = Student::paginate(20);
 
-        return response()->json($students, 200);
+        return response()->json([
+            'students' => $students->items(),
+            'current_page' => $students->currentPage(),
+            'total_pages' => $students->lastPage(),
+            'total_students' => $students->total(),
+        ], 200);
 
     }
 
@@ -69,11 +74,18 @@ class StudentController extends Controller
 
         if ($query) {
 
-            $student = Student::where('name', 'LIKE', "%$query%")->orWhere('grade', 'LIKE', "%$query%")->get();
-            return response()->json($student, 200);
+            $students = Student::where('name', 'LIKE', "%$query%")->orWhere('grade', 'LIKE', "%$query%")->paginate(20);
+
+            return response()->json([
+                'students' => $students->items(),
+                'current_page' => $students->currentPage(),
+                'total_pages' => $students->lastPage(),
+                'total_students' => $students->total(),
+            ], 200);
 
         }
 
         return response()->json(['message' => 'No results found', 'status' => 404]);
     }
+
 }
